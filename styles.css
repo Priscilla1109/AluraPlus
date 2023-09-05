@@ -1,0 +1,179 @@
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --azul-botao: #167bf7;
+    --background-color: #00030c;
+    --fonte-principal:'Inter';
+    --botao-azul-efeito: #a3cdff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* { /*esse seletor altera os elementos*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("assets/Background.png"); /*usado para colocar imagem de fundo*/
+    background-repeat: no-repeat; /*usamos para não repetir a imagem no backgroud*/
+    background-size: contain; /*vai preencher todo o espaço do container, que nesse caso é a section*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%; /*separa o conteúdo da página em colunas*/
+}
+
+.container__botao{
+    background-color: var(--azul-botao);
+    border-radius: 5px;
+    padding: 1em; /*medida relativa ao tamanho da fonte*/
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.container__botao__secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    color: var(--branco-principal);
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0; /*os valores são atribuidos no sentido horário*/
+}
+
+.container__caixa{
+    margin: 0 6em;
+}
+
+.container__secundario__imagem{
+    width: 80%;
+}
+
+.container__secundario{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    margin: 0 10em;
+}
+
+.container__descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.container__descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block; /*ocupa apenas o espaço do bloco na linha*/
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    text-align: center;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin: 2em 0 0 0;
+}
+
+.lista__item{
+    font-size: 32px;
+    color: var(--cinza-secundario);
+}
+
+.rodape{
+    text-align: center;
+}
+
+.rodape__logo{
+    margin: 5em 0 0 0;
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+}
+
+.lista__link{
+    font-size: 16px;
+    list-style-type: none;
+    color: var(--cinza-secundario);
+    padding: 1em;
+    margin: 2em 0 2em 0;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.rodape__texto{
+    font-size: 14px;
+    color: var(--cinza-secundario);
+    margin: 0 5em 1em 5em ;
+}
+
+.lista__link a:hover {
+    color: var(--azul-botao);
+}
+
+.lista__link a:active { /*active é uma pseudoclasse que consegue detectar nossa interação com a tela*/
+    color: var(--botao-azul-efeito);
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.container__botao__secundario:hover{
+    background-color: var(--botao-azul-efeito);
+    color: var(--background-color);
+    font-weight: bold;
+}
